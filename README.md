@@ -1,13 +1,7 @@
-# Object-Detection-And-Size-Estimation
-In image processing, digital images are analyzed and modified using computer algorithms for tasks like filtering, enhancing, and recognizing. It is used in various industries such as robotics, entertainment, medical imaging, and agriculture. This project uses image processing to measure the size and distance of objects, focusing on veggies without physical contact. It integrates AI and IT to improve agricultural efficiency. The use of modified Canny edge detection and Multiscale Faster-NN algorithms enables real-time measurement and flaw identification.
-The main algorithms adopted here are e Detectron2, Faster-RCNN and Canny Edge Detection. 
-# Detectron2 : 
-Developed by Facebook AI Research, Detectron2 is an open-source framework for object detection and image segmentation. It offers modern models such as Faster R-CNN and Mask R-CNN, with capabilities for distributed and multi-GPU training, making it popular for research and business applications.
-# Faster-RCNN : 
-Faster R-CNN is a two-stage object detection algorithm utilizing a region proposal network to identify candidate object areas and a Fast R-CNN network to classify and refine bounding boxes. It combines speed and precision, making it suitable for applications like self-driving cars and security systems.
-# Canny Edge Detection : 
-Canny edge detection is widely used in image processing for its precise edge detection and noise reduction capabilities. The algorithm's multi-stage approach and careful parameter selection result in resilient and reliable edge detection. It helps reduce the total amount of data processed while extracting structural information and is commonly used in computer vision systems. The OpenCV Canny() function is utilized for edge detection, and it is known for producing smoother, cleaner images compared to previous algorithms.
-# About Dataset :
-In order to train key point detection networks, a vegetable key point dataset was compiled, comprising 400 photos of four common vegetables: Cucumber, Brinjal, Tomato, and Capsicum. Each category consists of 100 images, with 80 for training, 10 for testing, and 10 for validation. Each image includes a Region of Interest (ROI) box and key points for Top, Left, Bottom, and Right of the primary object, facilitating vegetable size estimation using fewer key points to simplify the model. The Left and Right key points are used for diameter estimation, while the Top and Bottom key points are utilized for length calculation.
-# Methodology :
-We Preprocess the dataset images and acquire RGB images and depth maps of vegetables. The images go through edge detection and are then processed using Detectron2's Faster R-CNN for vegetable identification. The process involves Feature Pyramid Network (FPN) for feature extraction, Regional Proposal Network (RPN) for object region identification, and ROI Heads for key point and box detection. Multiscale detection is employed to identify objects of varying sizes, and size estimation is achieved by utilizing annotated XML files and applying a pixel distance to centimeter measurement conversion using the Euclidean Distance formula. The pixel points are output by networks, and their separation is calculated and converted to centimeters.
+# 🔍 Object Detection and Size Estimation
+
+![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white)
+
+A computer vision algorithmic suite dedicated to analyzing pixel space mapping and generating bounding boxes around physical entities to actively predict their real-world spatial measurements. Highly useful for automated package sizing or autonomous navigation.
+
+Utilizes standard `PyTorch` model weights integrated with advanced matrix analysis on image arrays to detect contour structures and scale them computationally depending on relative focal calibrations.
